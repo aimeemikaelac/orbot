@@ -25,3 +25,7 @@
 [submodule "external/jsocks"]
 	path = external/jsocks
 	url = https://github.com/guardianproject/jsocks.git
+[submodule "external/tor"]
+	path = external/tor
+	url = git@github.com:mcoughli/tor.git
+	branch = orbot_tor
