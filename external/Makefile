@@ -187,7 +187,7 @@ tor/Makefile: tor/configure
 	cp config.guess tor
 	cd tor && \
                 CC="$(CC)" AR="$(AR)" RANLIB=$(RANLIB) CFLAGS="$(CFLAGS) -D_FORTIFY_SOURCE=2 -fwrapv -fno-strict-aliasing -fno-strict-overflow" LDFLAGS="$(LDFLAGS)" \
-                        LIBS="-L$(EXTERNAL_ROOT)/lib" CFLAGS="-I$(EXTERNAL_ROOT)/include -I$(EXTERNAL_ROOT)/include/event2" \
+                        LIBS="-L$(EXTERNAL_ROOT)/lib -L/usr/local/lib -luio" CFLAGS="-I$(EXTERNAL_ROOT)/include -I$(EXTERNAL_ROOT)/include/event2 -I/usr/local/include" \
                         ./configure \
                                 --host=$(HOST) \
 				--disable-asciidoc \
